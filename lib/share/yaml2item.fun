@@ -11,8 +11,6 @@ yaml2item()
 {
   local filter="$1"
   local yaml="$2"
-  dump ">> \$filter: $filter"
-  dump ">> \$yaml: $yaml"
   [[ ! -x $YQBIN ]] && fatal "ERROR: yq binary not found. check installation, and \$PATH."
   # key value pairs to array
   echo $( yq eval "$filter" "$yaml" )
