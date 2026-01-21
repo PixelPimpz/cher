@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-SHARE="$( tmux show -gqv @CHER )/lib/share"
-source "$SHARE/dump.fun"
-source "$SHARE/fatal.fun"
-source "$SHARE/yaml2item.fun"
+if ! $SHARE; then
+  SHARE="$( tmux show -gqv @CHER )/lib/share"
+  source "$SHARE/dump.fun"
+  source "$SHARE/fatal.fun"
+fi
 YQBIN=/usr/bin/yq
 
 yaml2item()
