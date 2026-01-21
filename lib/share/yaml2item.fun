@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if ! $SHARE; then
-  SHARE="$( tmux show -gqv @CHER )/lib/share"
+  SHARE="$( tmux show -gqv @CHER )"
   source "$SHARE/dump.fun"
   source "$SHARE/fatal.fun"
 fi
