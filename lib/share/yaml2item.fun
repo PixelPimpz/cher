@@ -15,6 +15,6 @@ yaml2item()
   dump ">> yq executable found."
 
   # key value pairs to array
-  echo "$( yq eval "${filter}" "$yaml" )"
+  echo $( yq eval "${filter}" "$yaml" )
 }
 
