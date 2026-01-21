@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-LOCAL_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-tmux set -g '@LOCAL_ROOT' "$LOCAL_ROOT"
+tmux set -g '@CHER' "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+LOCAL_ROOT="$(tmux show -gqv @CHER)
 
 tmux run "$LOCAL_ROOT/scripts/tmux-cher.sh"
