@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 yaml2opt()
 {
+  echo "hello"
+  tmux display -p "tmux hello"
   local filter="$1"
   local yaml="$2"
   [[ ! "$SHARE" ]] local SHARE="$( tmux show -gqv @CHER )" 
