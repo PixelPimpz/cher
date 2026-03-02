@@ -4,7 +4,7 @@ config:
   show-name: true
 icons:
   sys:
-    Alert: " "
+    Alert: "  "
     Document: "󰈙"
     GitBranch: ""
     Folder: ""
